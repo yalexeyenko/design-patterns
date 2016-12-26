@@ -1,22 +1,22 @@
-package command.tv;
+package command.radio;
 
 import command.Command;
 import command.ElectronicDevice;
 
-public class TurnTVUp implements Command {
+public class TurnRadioOff implements Command {
 	private ElectronicDevice device;
 	
-	public TurnTVUp(ElectronicDevice device) {
+	public TurnRadioOff(ElectronicDevice device) {
 		this.device = device;
 	}
 
 	@Override
 	public void execute() {
-		device.volumeUp();
+		device.off();
 	}
 
 	@Override
 	public void undo() {
-		device.volumeDown();
+		device.on();		
 	}
 }

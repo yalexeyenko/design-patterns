@@ -1,4 +1,7 @@
-package command;
+package command.tv;
+
+import command.Command;
+import command.ElectronicDevice;
 
 public class TurnTVOn implements Command {
 	private ElectronicDevice device;
@@ -10,6 +13,11 @@ public class TurnTVOn implements Command {
 	@Override
 	public void execute() {
 		device.on();
+	}
+
+	@Override
+	public void undo() {
+		device.off();
 	}
 
 }

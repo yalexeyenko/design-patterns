@@ -1,12 +1,12 @@
-package command.tv;
+package command.radio;
 
 import command.Command;
 import command.ElectronicDevice;
 
-public class TurnTVUp implements Command {
+public class TurnRadioUp implements Command {
 	private ElectronicDevice device;
 	
-	public TurnTVUp(ElectronicDevice device) {
+	public TurnRadioUp(ElectronicDevice device) {
 		this.device = device;
 	}
 

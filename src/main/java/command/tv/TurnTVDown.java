@@ -1,4 +1,7 @@
-package command;
+package command.tv;
+
+import command.Command;
+import command.ElectronicDevice;
 
 public class TurnTVDown implements Command {
 	private ElectronicDevice device;
@@ -10,5 +13,10 @@ public class TurnTVDown implements Command {
 	@Override
 	public void execute() {
 		device.volumeDown();
+	}
+
+	@Override
+	public void undo() {
+		device.volumeUp();
 	}
 }
